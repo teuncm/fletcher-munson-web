@@ -38,7 +38,7 @@ onUnmounted(() => {
 <template>
   <h1>Setup</h1>
 
-  <p>Adjust the volume slider to a comfortable listening level. Setup the slider such that you would give the tone a <span class="hl">2/10</span> score in terms of perceived loudness. Dragging the slider will automatically play audio.</p>
+  <p>Adjust the volume slider to a comfortable listening level. Setup the slider such that you would give the tone a <span class="hl">2/10</span> score in terms of perceived loudness. Dragging and holding the slider will automatically play audio.</p>
 
   <input type="range" :min="-50" :max="0" @pointerdown="startDragging" @pointerup="stopDragging" step="0.1" v-model="masterVolume" />
   <br></br>

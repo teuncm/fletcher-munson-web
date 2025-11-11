@@ -13,7 +13,7 @@ export const useLayoutStore = defineStore('layout', () => {
 
   function nextPanel(skip = 1) {
     if (curFlowIdx.value >= panelFlow.value.length - 1) {
-      console.warn("Reached the end of panel flow.");
+      console.warn("Reached end of panel flow.");
 
       return;
     }
