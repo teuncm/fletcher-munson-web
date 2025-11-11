@@ -1,5 +1,16 @@
 <script setup>
 import ContinueButton from '@/modules/utility/ContinueButton.vue';
+import { onUnmounted } from 'vue';
+
+function exitFullscreen() {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
+}
+
+onUnmounted(() => {
+  exitFullscreen();
+});
 </script>
 
 <template>

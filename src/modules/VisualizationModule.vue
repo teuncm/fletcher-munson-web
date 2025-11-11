@@ -87,12 +87,6 @@ function exportChartPng() {
   document.body.removeChild(link);
 }
 
-function exitFullscreen() {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  }
-}
-
 onUnmounted(() => {
   if (chartInstance) {
     chartInstance.destroy();
@@ -104,16 +98,15 @@ onUnmounted(() => {
   <h1>
     Visualization
   </h1>
+  <p>Below is a visualization of your measurements.</p>
   <canvas ref="canvasRef"></canvas>
   <br></br>
+  <p>Export options:</p>
   <button @click="exportMeasurementsCsv">Export measurements (.csv)</button>
   <br></br>
   <button @click="exportChartPng">Export chart (.png)</button>
   <br></br>
   <button @click="exportMetadataJson">Export all experiment data (.json)</button>
-  <br></br>
-  <p>Thank you! Press the button below to exit fullscreen.</p>
-  <button @click="exitFullscreen">Exit fullscreen</button>
 </template>
 
 <style scoped></style>
